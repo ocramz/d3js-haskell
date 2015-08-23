@@ -1,0 +1,11 @@
+<html> <head><body> <div id='body'></div> <script src='http://d3js.org/d3.v3.min.js' charset='utf-8'></script> <script charset='utf-8'>
+var array0 = d3.range(200).map(function(d,i){return {radius: Math.random() * 12.0 + 4.0};});
+var scale1 = d3.scale.category10();
+var force2 = d3.layout.force().gravity(5.0e-2).charge(function(d,i){return (i) ? (0) : (-2000);}).nodes(array0).size([1280.0,800.0]);
+force2.start();
+var sel3 = d3.select("#body").append("svg").attr("width",1280.0).attr("height",800.0);
+var dat4 = array0.slice(1);
+sel3.selectAll("circle").data(dat4).enter().append("circle").attr("r",function(d,i){return d.radius - 2.0;}).style("fill",function(d,i){return scale1(function(d,i){return i % 3;});});
+force2.on("tick",function(e){});
+
+</script> </body> </html>
