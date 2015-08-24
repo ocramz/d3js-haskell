@@ -1,0 +1,6 @@
+<html> <head><body> <div id='body'></div> <script src='http://d3js.org/d3.v3.min.js' charset='utf-8'></script> <script charset='utf-8'>
+var sel0 = d3.select("#div1").append("svg").attr("width",300.0).attr("height",300.0).style("background","#eef");
+var dat1 = [{x:0.0,y:197.90204729646962,width:28.5,height:102.0979527035304},{x:30.0,y:67.67161403259445,width:28.5,height:232.32838596740555},{x:60.0,y:96.62309616464916,width:28.5,height:203.37690383535084},{x:90.0,y:162.0201142825718,width:28.5,height:137.9798857174282},{x:120.0,y:144.86793507726654,width:28.5,height:155.13206492273346},{x:150.0,y:26.378719722068126,width:28.5,height:273.6212802779319},{x:180.0,y:174.46759930528845,width:28.5,height:125.53240069471157},{x:210.0,y:161.80495457285696,width:28.5,height:138.19504542714304},{x:240.0,y:29.943966222929816,width:28.5,height:270.0560337770702},{x:270.0,y:192.40095181110644,width:28.5,height:107.59904818889356}];
+sel0.selectAll("rect").data(dat1).enter().append("rect").attr("x",function(d,i){return d.x;}).attr("y",function(d,i){return d.y;}).attr("width",function(d,i){return d.width;}).attr("height",function(d,i){return d.height;}).style("fill","red");
+
+</script> </body> </html>
